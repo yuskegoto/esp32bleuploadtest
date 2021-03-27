@@ -38,10 +38,10 @@ const characteristicSize = 512;
  */
 function BTConnect() {
   navigator.bluetooth.requestDevice({
-    filters: [{
-      services: [myESP32]
-    }],
-    optionalServices: [otaServiceUuid]
+      filters: [{
+        services: [myESP32]
+      }],
+      optionalServices: [otaServiceUuid]
   })
     .then(device => {
       return device.gatt.connect()

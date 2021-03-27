@@ -23,6 +23,12 @@
                 ]
             },
             {
+                "software": "v0.0.2",
+                "hardware": [
+                    "v1.0"
+                ]
+            },
+            {
                 "software": "v0.0.1",
                 "hardware": [
                     "v1.0"
