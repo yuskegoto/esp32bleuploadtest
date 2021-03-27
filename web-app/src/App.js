@@ -10,7 +10,8 @@ import React from 'react';
 import Popup from 'react-popup';
 import './App.css';
 
-var myESP32 = 'd804b643-6ce7-4e81-9f8a-ce0f699085eb'
+// var myESP32 = 'd804b643-6ce7-4e81-9f8a-ce0f699085eb'
+var myESP32 = '4fafc201-1fb5-459e-8fcc-c5c9c331914b'
 
 var otaServiceUuid = 'c8659210-af91-4ad3-a995-a58d6fd26145'
 var versionCharacteristicUuid = 'c8659212-af91-4ad3-a995-a58d6fd26145'
