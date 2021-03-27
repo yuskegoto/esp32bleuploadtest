@@ -100,6 +100,7 @@ function CheckVersion() {
       document.getElementById('sw_version').innerHTML = "Software: " + softwareVersion;
     })
     //Grab our version numbers from Github
+    // .then(_ => fetch('https://raw.githubusercontent.com/konel-inc/panasonic_weave_ring_firmware/master/FirmwareBinaries/version.json'))
     .then(_ => fetch('https://raw.githubusercontent.com/yuskegoto/esp32bleuploadtest/master/GithubRepo/version.json'))
     // .then(_ => fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/master/GithubRepo/version.json'))
     .then(function (response) {
@@ -110,6 +111,7 @@ function CheckVersion() {
       // JSON should be formatted so that 0'th entry is the newest version
       if (latestCompatibleSoftware === softwareVersion) {
         //Software is updated, do nothing.
+        console.log("software is up to date");
       }
       else {
         var softwareVersionCount = 0;
@@ -146,6 +148,7 @@ function PromptUserForUpdate() {
       left: [{
         text: 'Yes',
         action: function () {
+          // fetch('https://raw.githubusercontent.com/konel-inc/panasonic_weave_ring_firmware/' + latestCompatibleSoftware + '/FirmwareBinaries/' + currentHardwareVersion + '.bin')
           fetch('https://raw.githubusercontent.com/yuskegoto/esp32bleuploadtest/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
           // fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
             .then(function (response) {
